@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>24点计算器</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';" />
+    <link rel="stylesheet" href="uikit/css/uikit.min.css" />
+    <script src="uikit/js/uikit.min.js"></script>
+    <script src="uikit/js/uikit-icons.min.js"></script>
+    <script src="preload.js"></script>
+</head>
+<body style="background: #fff">
+    <div>
+        <button title="关闭" id="closeBtn" onclick="onClose()" style="right: 10px; position: absolute; margin-top: 10px; border: none" class="uk-button uk-button-default uk-button-small uk-button-text">
+            <span uk-icon="close"></span>
+        </button>
+        <div id="appTopBar">
+            <p style="margin: 8px; margin-left: 20px">24点计算器</p>
+        </div>
+    </div>
+    <br /><br />
+    <div class="uk-container" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="uk-section uk-section-muted" style="overflow-y: auto; height: 175px">
+            <div style="margin-left: 20px; margin-right: 20px">
+                <h1 id="res">输入四个数开始计算</h1>
+                <p id="explain"></p>
+                <button id="expand" onclick="onExpand()" class="uk-button uk-button-default uk-button-small">
+                    展开
+                </button>
+            </div>
+        </div>
+        <br />
+        <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-4 uk-text-center" uk-grid>
+            <div style="height: 70px;">
+                <button onclick="onNumButtonClick(1)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    A
+                </button>
+            </div>
+            <div>
+                <button onclick="onNumButtonClick(2)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    2
+                </button>
+            </div>
+            <div>
+                <button onclick="onNumButtonClick(3)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    3
+                </button>
+            </div>
+            <div style="height: 70px;">
+                <button title="计算" onclick="onCalc()" class="uk-button uk-button-primary uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    =
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button onclick="onNumButtonClick(4)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    4
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button onclick="onNumButtonClick(5)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    5
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button onclick="onNumButtonClick(6)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    6
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button title="清空" onclick="onClear()" class="uk-button uk-button-secondary uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    C
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button onclick="onNumButtonClick(7)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    7
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button onclick="onNumButtonClick(8)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    8
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button onclick="onNumButtonClick(9)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    9
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button
+                    onclick="onRandom()"
+                    class="uk-button uk-button-secondary uk-button-large"
+                    style="height: 100%; width: 100%; font-size: 25px"
+                    uk-icon="grid"
+                    title="随机"
+                >
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button onclick="onNumButtonClick(10)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px;">
+                    10
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button onclick="onNumButtonClick(11)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    J
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button onclick="onNumButtonClick(12)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    Q
+                </button>
+            </div>
+            <div style="height: 70px; margin-top: 10px;">
+                <button onclick="onNumButtonClick(13)" class="uk-button uk-button-default uk-button-large" style="height: 100%; width: 100%; font-size: 25px">
+                    K
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
